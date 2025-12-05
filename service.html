@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africana tech </title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+</head>
+<body class="font-[Poppins] bg-gray-100">
+
+    <header class="bg-white shadow-md py-4">
+
+    <nav class="relative flex justify-between items-center w-[92%] mx-auto ">
+
+        <div>
+            <img class="w-20" src="picha/AFRICANA TECH SOLUTION-01.png" alt="">
+        </div>
+
+        <div id="navLinks" class="absolute left-0 top-full w-full bg-white min-h-[60vh] px-5 z-50 hidden md:static md:flex md:w-auto md:min-h-fit md:items-center">
+            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw]  gap-8 font-medium">
+                <li><a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-blue-500">About</a></li>
+                <li><a href="service.html" class="text-gray-700 hover:text-blue-500">Services</a></li>
+                <li><a href="client.html" class="text-gray-700 hover:text-blue-500">Client</a></li>
+            </ul>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="contact.html" class="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Contact Us</button></a>
+            <ion-icon onclick="onTogglemenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden "></ion-icon>
+        </div>
+    </nav>
+    </header>
+
+    <!-- 2. HERO SECTION (Services Overview) -->
+    <section class="relative bg-gray-900 h-[60vh] flex items-center justify-center">
+         <div class="absolute inset-0">
+            <img 
+                src="picha/programming-background-collage.jpg" 
+                alt="Digital infrastructure overlayed on African landscape" 
+                class="w-full h-full object-cover opacity-40"
+            >
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white p-6 max-w-4xl mx-auto">
+            <h1 class="text-5xl sm:text-6xl lg:text-4xl font-extrabold mb-4 leading-tight"> Our Service </h1>
+            <p class="text-xl sm:text-2xl font-medium text-white-400 mb-3">Comprehensive digital solutions tailored to drive your business growth.</p>
+            
+        </div>
+    </section>
+      
+
+    <!-- 3. SERVICES GRID -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 lg:px-12">
+            
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                Our End-to-End Digital Offerings
+            </h2>
+
+            <!-- Grid Container for Services (Responsive: 1, 2, or 3 columns) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Service Card 1: Web Development -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                    <!-- Image Placeholder -->
+                    <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" alt="Web Development Icon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-africana-indigo mb-3">Web Development</h3>
+                        <p class="text-gray-600">
+                            We create responsive, high-performance websites and web applications that deliver 
+                            exceptional user experiences across all devices and platforms.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Branding & Design -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                    <!-- Image Placeholder -->
+                    <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" alt="Branding and Design Icon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-africana-indigo mb-3">Branding & Design</h3>
+                        <p class="text-gray-600">
+                            Our creative team develops compelling visual identities that communicate your brand's essence and resonate with your target audience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Digital Marketing -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                    <!-- Image Placeholder -->
+                    <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" alt="Digital Marketing Icon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-africana-indigo mb-3">Digital Marketing</h3>
+                        <p class="text-gray-600">
+                            We implement data-driven digital marketing strategies to increase your online visibility, generate leads, and drive business growth.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: App Development -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                    <!-- Image Placeholder -->
+                    <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" alt="Mobile App Development Icon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-africana-indigo mb-3">App Development</h3>
+                        <p class="text-gray-600">
+                            From concept to deployment, we build intuitive mobile applications for iOS and Android that engage users and solve real business problems.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 5: Cybersecurity -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                    <!-- Image Placeholder -->
+                    <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" alt="Cybersecurity and Protection Icon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-africana-indigo mb-3">Cybersecurity</h3>
+                        <p class="text-gray-600">
+                            Protect your digital assets with our comprehensive cybersecurity solutions, including risk assessment, threat monitoring, and incident response.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Service Card 6: System Development -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500">
+                    <!-- Image Placeholder -->
+                    <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" alt="System Development Icon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-africana-indigo mb-3">System Development</h3>
+                        <p class="text-gray-600">
+                            We design and develop custom software systems and enterprise solutions that streamline operations and improve business efficiency.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+   
+
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-indigo-400">Africana Tech</h3>
+                    <p class="text-sm text-gray-400">We Deliver Cutting-Edge Technology Solutions That Drive Growth, Enhance Security, And Establish Powerful Digital Presence for Businesses Across Africa And beyond. We Deliver Cutting-Edge Technology Solutions That Drive Growth, Enhance.
+</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Client</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Sitemap</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <p class="text-sm text-gray-400">Dar es salaam Tanzania</p>
+                    <p class="text-sm text-gray-400">africanatech@com</p>
+                    <p class="text-sm text-gray-400">(+255) 0672 743 065</p>
+                </div>
+
+            </div>
+
+            <div class="text-center text-sm text-gray-400">
+                &copy; 2025  Africana Tech Company. All rights reserved.
+            </div>
+            
+        </div>
+    </footer>
+    
+  
+    <script src="script.js"></script>
+</body>
+</html> 
