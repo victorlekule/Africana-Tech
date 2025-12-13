@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Africana tech </title>
+   <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body class="font-[Poppins] bg-gray-100">
+
+    <header class="bg-white shadow-md py-4">
+
+    <nav class="relative flex justify-between items-center w-[92%] mx-auto ">
+
+        <div>
+            <img class="w-20" src="picha/AFRICANA TECH SOLUTION-01.png" alt="">
+        </div>
+
+        <div id="navLinks" class="absolute left-0 top-full w-full bg-white min-h-[60vh] px-5 z-50 hidden md:static md:flex md:w-auto md:min-h-fit md:items-center">
+            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw]  gap-8 font-medium">
+                <li><a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-blue-500">About</a></li>
+                <li><a href="service.html" class="text-gray-700 hover:text-blue-500">Services</a></li>
+                <li><a href="client.html" class="text-gray-700 hover:text-blue-500">Client</a></li>
+            </ul>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="contact.html" class="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Contact Us</button></a>
+            <ion-icon onclick="onTogglemenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden "></ion-icon>
+        </div>
+    </nav>
+    </header>
+
+   
+    <body class="bg-white font-sans text-dark-text">
+
+    <div class="container mx-auto px-4 py-16 max-w-6xl"> 
+
+        <header class="text-center mb-16 border-b-4 border-primary-blue pb-8">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-dark-text mb-4">
+                Full-Stack Web Engineering
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our web development process is focused on creating responsive, high-performance, and scalable digital solutions tailored to meet your unique business objectives and deliver exceptional user experiences.
+            </p>
+        </header>
+
+        <section class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+                <h2 class="text-4xl font-bold text-primary-blue mb-6 border-l-4 border-primary-blue pl-4">
+                    1. The Full-Stack Approach
+                </h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    We don't just build websites; we **engineer end-to-end web applications**. This requires comprehensive proficiency across the entire technology stack to ensure performance, security, and scalability from the database to the final user interface.
+                </p>
+                <div class="space-y-4">
+                    <h4 class="text-xl font-semibold text-dark-text border-b pb-2">Key Stack Components:</h4>
+                    <ul class="text-gray-700 space-y-3">
+                        <li class="flex items-start"><i class="fas fa-desktop text-primary-blue mt-1 mr-3"></i> 
+                            **Frontend (UI/UX):** Focus on dynamic, responsive interfaces and exceptional user interaction.</li>
+                        <li class="flex items-start"><i class="fas fa-server text-primary-blue mt-1 mr-3"></i> 
+                            **Backend (Logic/API):** Handles data, security, business rules, and high-speed communication.</li>
+                        <li class="flex items-start"><i class="fas fa-cloud-upload-alt text-primary-blue mt-1 mr-3"></i> 
+                            **DevOps & Cloud:** Automation, CI/CD pipelines, and infrastructure management for reliability.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shadow-xl rounded-xl overflow-hidden h-72">
+                <img src="Image/web.jpg" alt="Full Stack Development Architecture" class="w-full h-full object-cover rounded-xl">
+            </div>
+        </section>
+        
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-dark-text mb-10 text-center">
+                2. Core Service Offerings
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
+                    <i class="fas fa-cogs text-3xl text-primary-blue mb-3"></i>
+                    <h3 class="text-xl font-bold text-dark-text mb-2">Custom Web Application Development</h3>
+                    <p class="text-gray-600">Building complex, feature-rich platforms (SaaS, CRMs) from scratch to solve specific business challenges.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
+                    <i class="fas fa-sitemap text-3xl text-primary-blue mb-3"></i>
+                    <h3 class="text-xl font-bold text-dark-text mb-2">Corporate Website Design & Development</h3>
+                    <p class="text-gray-600">Crafting high-converting marketing sites that serve as the digital cornerstone of your brand identity.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
+                    <i class="fas fa-shopping-cart text-3xl text-primary-blue mb-3"></i>
+                    <h3 class="text-xl font-bold text-dark-text mb-2">E-commerce Solutions</h3>
+                    <p class="text-gray-600">Developing secure, high-availability online stores using platforms like Shopify or custom frameworks.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
+                    <i class="fas fa-link text-3xl text-primary-blue mb-3"></i>
+                    <h3 class="text-xl font-bold text-dark-text mb-2">System Integrations & APIs</h3>
+                    <p class="text-gray-600">Connecting applications with third-party tools (CRMs, ERPs, payment gateways) to streamline workflows.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary-blue">
+                    <i class="fas fa-user-shield text-3xl text-primary-blue mb-3"></i>
+                    <h3 class="text-xl font-bold text-dark-text mb-2">Web Portal Development</h3>
+                    <p class="text-gray-600">Creating secure, role-based portals for customers, vendors, or internal employees (client dashboards).</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div class="shadow-xl rounded-xl overflow-hidden h-72 order-last md:order-first">
+                <img src="Image/web.jpg" alt="Web Development Technology Stack Logos" class="w-full h-full object-cover rounded-xl">
+            </div>
+            <div>
+                <h2 class="text-4xl font-bold text-primary-blue mb-6 border-l-4 border-primary-blue pl-4">
+                    3. Our Technology Stack
+                </h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    We specialize in cutting-edge and industry-leading technologies to ensure your product is modern, fast, and scalable for the long term.
+                </p>
+                <ul class="space-y-4">
+                    <li><strong class="text-dark-text">Frontend:</strong> <span class="font-mono text-primary-blue">React.js, Vue.js, Tailwind CSS</span> (Modern, dynamic UIs).</li>
+                    <li><strong class="text-dark-text">Backend:</strong> <span class="font-mono text-primary-blue">Node.js (Express), Python (Django/Flask), PHP (Laravel)</span> (Robust, scalable logic).</li>
+                    <li><strong class="text-dark-text">Database:</strong> <span class="font-mono text-primary-blue">PostgreSQL, MongoDB</span> (Relational integrity & NoSQL flexibility).</li>
+                    <li><strong class="text-dark-text">DevOps:</strong> <span class="font-mono text-primary-blue">AWS, GCP, Docker/Kubernetes</span> (Reliable hosting & deployment).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold text-dark-text mb-10 text-center">
+                4. Focus on Performance and Quality
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md border-b-4 border-primary-blue">
+                    <i class="fas fa-mobile-alt text-4xl text-primary-blue mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-dark-text mb-2">Mobile-First Responsiveness</h3>
+                    <p class="text-gray-700">Using **CSS Grid and Flexbox**, we guarantee an optimal experience across all devices and screen sizes.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md border-b-4 border-primary-blue">
+                    <i class="fas fa-lock text-4xl text-primary-blue mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-dark-text mb-2">Enterprise-Grade Security</h3>
+                    <p class="text-gray-700">Protection against **XSS and CSRF**, **SSL/TLS encryption**, and secure **OAuth/JWT** authentication.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md border-b-4 border-primary-blue">
+                    <i class="fas fa-rocket text-4xl text-primary-blue mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-dark-text mb-2">Speed & Optimization</h3>
+                    <p class="text-gray-700">Optimizing assets and leveraging **CDNs** to achieve top scores on **Google Core Web Vitals**.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-fpso-dark text-white p-10 rounded-xl shadow-2xl text-center mb-10">
+    <h3 class="text-4xl font-bold mb-3">Transform Your Digital Presence</h3>
+    <p class="text-lg mb-8 text-white-300">
+        Ready to build a blazing-fast SPA, a complex ERP, or a high-volume e-commerce platform? Our team is ready.
+    </p>
+
+    <a href="javascript:void(0);" id="openModalBtn"
+
+       class="inline-flex items-center bg-fpso-accent text-black hover:bg-opacity-90 font-bold rounded-lg text-lg px-8 py-4 transition duration-300 transform hover:scale-105 shadow-lg">
+        <i class="fas fa-paper-plane mr-3"></i>
+        Let's Discuss Your Project Goals
+    </a>
+    <div id="projectInquiryModal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+        <div class="fixed inset-0 bg-black bg-opacity-70 transition-opacity"></div>      
+        <div class="flex items-center justify-center min-h-screen p-4">       
+
+            <div class="bg-white p-8 md:p-12 shadow-2xl rounded-xl w-full max-w-2xl transform transition-all relative">             
+                <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-500 hover:text-dark-text text-2xl">
+                    &times;
+                </button>
+                <div id="successMessage" class="hidden bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-6" role="alert">
+                  <strong class="font-bold">Success!</strong>
+                  <span class="block sm:inline">Your inquiry has been submitted. Redirecting...</span>
+                </div>
+                <header class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-black mb-2">
+                        Ready to See Your Business Grow?
+                    </h2>
+                    <p class="text-lg text-gray-600">
+                        Tell us about your project goals and the areas where you need expert support.
+                    </p>
+                </header>
+                <form action="/submit-project-inquiry" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-black mb-1">Full Name *</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black"
+                                   placeholder="Jane Doe">
+                        </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-black mb-1">Company Name *</label>
+                            <input type="text" id="company" name="company" required
+                                   class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black"
+                                   placeholder="Your Business Name">
+                        </div>
+                    </div>                   
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-black mb-1">Business Email *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black"
+                                   placeholder="name@company.com">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-black mb-1">Phone Number</label>
+                            <input type="tel" id="phone" name="phone"
+                                   class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black"
+                                   placeholder="(+1) 555 123 4567">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-dark-text mb-3">Which services are you interested in? (Select all that apply) *</label>
+                        <div class="grid sm:grid-cols-2 gap-3">                      
+                            <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
+                                <input type="checkbox" name="services[]" value="website_development" data-detail="webDetail"
+                                       class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
+                                <i class="fas fa-desktop text-black mr-2"></i> <span class="text-black font-medium">Website Development</span>
+                            </label>                          
+                            <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
+                                <input type="checkbox" name="services[]" value="branding" data-detail="brandDetail"
+                                       class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
+                                <i class="fas fa-magic text-black mr-2"></i> <span class="text-black font-medium">Branding & Design</span>
+                            </label>                          
+                            <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
+                                <input type="checkbox" name="services[]" value="mobile" data-detail="mobileDetail"
+                                       class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
+                                <i class="fas fa-mobile-alt text-black mr-2"></i> <span class="text-black font-medium">Mobile App Development</span>                            </label>                          
+                            <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
+                                <input type="checkbox" name="services[]" value="cyber_security"
+                                       class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
+                                <i class="fas fa-shield-alt text-black mr-2"></i> <span class="text-black font-medium">Cybersecurity</span>
+                            </label>                         
+                            <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
+                                <input type="checkbox" name="services[]" value="networking"
+                                       class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
+                                <i class="fas fa-network-wired text-black mr-2"></i> <span class="text-black font-medium">Networking & Infrastructure</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="dynamicFields" class="space-y-4 pt-4 border-t border-gray-200">                    
+                        <div id="webDetail" class="hidden">
+                            <label for="web_type" class="block text-sm font-medium text-dark-text mb-1">What type of website do you need?</label>
+                            <select id="web_type" name="web_type"
+                                     class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
+                                <option value="">-- Select type --</option>
+                                <option value="corporate">Corporate Marketing Site</option>
+                                <option value="ecommerce">E-commerce/Online Store</option>
+                                <option value="saas">SaaS/Custom Web App</option>
+                            </select>
+                        </div>                    
+                        <div id="brandDetail" class="hidden">
+                            <label for="brand_focus" class="block text-sm font-medium text-dark-text mb-1">What is the primary focus of your branding project?</label>
+                            <select id="brand_focus" name="brand_focus"
+                                     class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
+                                <option value="">-- Select focus --</option>
+                                <option value="new_identity">New Brand Identity (Logo, Colors)</option>
+                                <option value="rebrand">Rebranding & Strategy</option>
+                                <option value="guide">Style Guide Creation</option>
+                            </select>
+                        </div>                      
+
+                        <div id="mobileDetail" class="hidden">
+                            <label for="mobile_platform" class="block text-sm font-medium text-dark-text mb-1">Which platform(s) are you targeting?</label>
+                            <select id="mobile_platform" name="mobile_platform"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
+                                <option value="">-- Select platform --</option>
+                                <option value="ios">iOS Only</option>
+                                <option value="android">Android Only</option>
+                                <option value="both">iOS & Android (Native/Hybrid)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="details" class="block text-sm font-medium text-fpso-dark mb-1">Tell us about your overall project/goals:</label>
+                        <textarea id="details" name="details" rows="4"
+                                  class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black"
+                                  placeholder="Describe your current challenge and what you hope to achieve."></textarea>                    </div>
+                    <button type="submit" id="submitBtn"
+                            class="w-full inline-flex items-center justify-center bg-fpso-dark text-white hover:bg-opacity-90 font-bold rounded-lg text-lg px-8 py-4 transition duration-300 transform hover:scale-[1.01] shadow-lg">
+                        <i class="fas fa-paper-plane mr-3"></i>
+                        Submit Project Inquiry
+                    </button>  
+                </form>
+            </div>        
+        </div>
+    </div>
+</section>    
+
+   
+
+
+
+ <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 text-indigo-400">Africana Tech</h3>
+                    <p class="text-sm text-gray-400">We Deliver Cutting-Edge Technology Solutions That Drive Growth, Enhance Security, And Establish Powerful Digital Presence for Businesses Across Africa And beyond. We Deliver Cutting-Edge Technology Solutions That Drive Growth, Enhance.
+</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Client</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+                        <div class="flex flex-col space-y-3 text-xl">                            
+                            <a href="YOUR_INSTAGRAM_LINK" class="text-gray-400 hover:text-pink-500 transition duration-300" 
+                            aria-label="Instagram">
+                                <i class="fab fa-instagram mr-2"></i> Instagram
+                            </a>                            
+                            <a href="YOUR_X_LINK" class="text-gray-400 hover:text-blue-400 transition duration-300" 
+                            aria-label="X (Twitter)">
+                                <i class="fab fa-x-twitter mr-2"></i>
+                                X (Twitter)
+                            </a>                            
+                            <a href="YOUR_FACEBOOK_LINK" class="text-gray-400 hover:text-blue-600 transition duration-300" 
+                            aria-label="Facebook">
+                                <i class="fab fa-facebook-f mr-2"></i>
+                                Facebook
+                            </a>
+                            
+                            <a href="YOUR_TIKTOK_LINK" class="text-gray-400 hover:text-white transition duration-300" 
+                            aria-label="TikTok">
+                                <i class="fab fa-tiktok mr-2"></i>
+                                TikTok
+                            </a>                            
+                            <a href="YOUR_LINKEDIN_LINK" class="text-gray-400 hover:text-blue-500 transition duration-300" 
+                            aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in mr-2"></i>
+                                LinkedIn
+                            </a>                            
+                        </div>
+                    </div>
+                
+                <div>
+                <h3 class="text-lg font-semibold mb-4">Contact</h3>                
+                <div class="space-y-3">                     
+                    <p class="flex items-start text-sm text-gray-400">
+                        <i class="fas fa-map-marker-alt text-lg mr-3 mt-1 text-indigo-400"></i>
+                        <span>Dar es salaam Tanzania</span>
+                    </p>                    
+                    <p class="flex items-center text-sm text-gray-400">
+                        <i class="fas fa-envelope text-lg mr-3 text-indigo-400"></i>
+                        <span>africanatech@com</span>
+                    </p>                    
+                    <p class="flex items-center text-sm text-gray-400">
+                        <i class="fas fa-phone-alt text-lg mr-3 text-indigo-400"></i>
+                        <span>(+255) 0672 743 065</span>
+                    </p>                    
+                </div>
+                </div>
+
+            </div>
+
+            <div class="text-center text-sm text-gray-400">
+                &copy; 2025  Africana Tech Company. All rights reserved.
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+        
+    </body>
