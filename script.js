@@ -102,97 +102,72 @@ function onTogglemenu(el){
 
 
 //form popup//
-    document.addEventListener('DOMContentLoaded', function () {
-        // --- Element References ---
-        const modal = document.getElementById('projectInquiryModal');
-        const openBtn = document.getElementById('openModalBtn');
-        const closeBtn = document.getElementById('closeModalBtn');
-        const checkboxes = document.querySelectorAll('.service-checkbox');
-        const dynamicFieldsContainer = document.getElementById('dynamicFields');
-        const form = modal.querySelector('form');
+    document.addEventListener('DOMContentLoaded', function() {
 
-        
-        // Function to open the modal
-        openBtn.addEventListener('click', function () {
-            // 1. Show the modal (remove the 'hidden' class)
-            modal.classList.remove('hidden');
-            // 2. Prevent the main page from scrolling
-            document.body.style.overflow = 'hidden'; 
-        });
+        // 1. Get DOM elements
+        // *** FIX APPLIED HERE: Changed ID lookup from 'open-partnership-btn' to 'read-btn' ***
+        const openBtn = document.getElementById('read-btn'); 
+        const modal = document.getElementById('partnership-modal');
+        const closeBtn = document.getElementById('close-modal-btn');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const modalContent = document.getElementById('modal-content');
+        const partnershipForm = document.getElementById('partnership-form');
+        const successMessage = document.getElementById('success-message');
 
-        // Function to close the modal
-        function closeModal() {
-            modal.classList.add('hidden');
-            document.body.style.overflow = ''; // Restore background scrolling
+        if (!modal || !openBtn) {
+            console.error("Critical elements (modal or read button) not found. Check your HTML IDs.");
+            return;
         }
 
+        // Utility function to open the modal (handles display and transition)
+        function openModal() {
+            modal.classList.remove('hidden'); 
+            
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        // Utility function to close the modal (handles transition and display)
+        function closeModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                // Reset form visibility and clear form when closing
+                partnershipForm.classList.remove('hidden');
+                partnershipForm.reset();
+                successMessage.classList.add('hidden');
+            }, 300); 
+        }
+
+        // 2. Event Listeners for Opening and Closing
+        openBtn.addEventListener('click', openModal); // This now links the 'read-btn' to open the modal
         closeBtn.addEventListener('click', closeModal);
+        modalOverlay.addEventListener('click', closeModal);
 
-        // Close modal when clicking on the dark backdrop area
-        modal.addEventListener('click', function (e) {
-            // Check if the click target is the modal container itself (the dark backdrop)
-            if (e.target.id === 'projectInquiryModal') { 
-                closeModal();
-            }
-        });
-
-        // Close modal with ESC key
-        document.addEventListener('keydown', function (e) {
+        // Optional: Close modal when pressing the ESC key
+        document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
                 closeModal();
             }
         });
 
-        // --- Dynamic Field Logic (The core responsiveness feature) ---
-        
-        function toggleDynamicFields() {
-            let anyDetailedChecked = false;
-
-            checkboxes.forEach(checkbox => {
-                const detailId = checkbox.dataset.detail;
-                const detailField = document.getElementById(detailId);
-                
-                if (detailField) {
-                    if (checkbox.checked) {
-                        detailField.classList.remove('hidden');
-                        anyDetailedChecked = true;
-                    } else {
-                        detailField.classList.add('hidden');
-                        // Optional: Reset value when unchecked
-                        detailField.querySelector('select').value = '';
-                    }
-                }
-            });
-
-            // Show/hide the entire dynamic container border/padding if fields are present
-            if (anyDetailedChecked) {
-                 dynamicFieldsContainer.classList.remove('hidden');
-            } else {
-                 dynamicFieldsContainer.classList.add('hidden');
-            }
-        }
-
-        // Attach event listeners to all service checkboxes to run the toggle function
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', toggleDynamicFields);
+        // 3. Form Submission Handling (Prevents page reload and shows success message)
+        partnershipForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            // 1. Hide the form
+            this.classList.add('hidden'); 
+            
+            // 2. Show the success message
+            successMessage.classList.remove('hidden'); 
         });
-
-        // Initial run to ensure correct state on page load
-        toggleDynamicFields();
-        
-        // --- Form Submission Validation (Optional: Check at least one service is selected) ---
-        form.addEventListener('submit', function (e) {
-             let isChecked = false;
-             checkboxes.forEach(checkbox => {
-                 if (checkbox.checked) isChecked = true;
-             });
-
-             if (!isChecked) {
-                 e.preventDefault();
-                 alert('Please select at least one service you are interested in.');
-             }
-         });
     });
+
+
 
     //smaill pop message //
 
