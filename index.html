@@ -9,7 +9,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
 
 
 </head>
@@ -63,9 +67,182 @@
         </div>
     </section>
 
-   
+ 
+    <!--key focus  area-->
+     <section id="services-section" class="relative min-h-screen flex flex-col justify-center py-2">
+        <div class="text-center mb-4 px-4">
+            <h2 class="text-2xl md:text-4xl font-black uppercase text-white leading-tight pt-2">Core Tech Services</h2>            
+            <div class="h-1 w-20 bg-blue-600 mx-auto mt-2"></div> </div>
 
-    <section class="py-20 bg-gray-50">
+             <div class="relative w-full">
+            <button id="prevBtn" class="nav-arrow" aria-label="Previous Service">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextBtn" class="nav-arrow" aria-label="Next Service">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="solutions-mask">
+                <div id="track">
+            <div class="solution-card">
+                <img src="picha/corporate-management-strategy-solution-branding-concept.jpg" class="card-img" alt="Web Development software interface on a screen">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">Web Development</h3>
+                    <p>Custom high-performance web applications built for maximum engagement.</p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <img src="picha/corporate-management-strategy-solution-branding-concept.jpg" class="card-img" alt="Creative branding and design visual elements">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">Branding & Design</h3>
+                    <p>Powerful visual identities that make your brand stand out in a crowded market.</p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <img src="picha/corporate-management-strategy-solution-branding-concept.jpg" class="card-img" alt="Digital marketing growth charts and strategy icons">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">Digital Marketing</h3>
+                    <p>Data-driven strategies to grow your presence across all digital channels.</p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <img src="picha/corporate-management-strategy-solution-branding-concept.jpg" class="card-img" alt="Mobile application development mockup on a phone">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">App Development</h3>
+                    <p>Native and cross-platform mobile solutions for seamless user experiences.</p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" class="card-img" alt="Professional securing a laptop with cybersecurity protocols">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">Cybersecurity</h3>
+                    <p>Security audits and threat protection to safeguard your critical data assets.</p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" class="card-img" alt="Network infrastructure and global connectivity visualization">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">Networks</h3>
+                    <p>Robust infrastructure design for seamless global communication and data flow.</p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" class="card-img" alt="Corporate team receiving professional IT training">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">Corporate Training</h3>
+                    <p>Professional IT training tailored to your organizational upskilling needs.</p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" class="card-img" alt="Artificial Intelligence and Machine Learning training concept">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">AI Training</h3>
+                    <p>Specialized AI and ML training to prepare your team for future technologies.</p>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <img src="picha/business-person-using-laptop-multitasking-finish-daily-startup-tasks (1).jpg" class="card-img" alt="IT specialist performing proactive system maintenance">
+                <div class="glass-box">
+                    <h3 class="font-bold text-blue-400">IT Maintenance</h3>
+                    <p>Proactive support to ensure your operations run smoothly without interruption.</p>
+                    </div>
+                </div>
+                </div>
+                    </div>
+                </div>
+
+                <div id="numberNav" class="flex flex-wrap justify-center gap-3 mt-8"></div>
+            </section>
+
+    <script>
+        window.addEventListener('load', () => {
+            const section = document.getElementById('services-section');
+            const track = document.getElementById('track');
+            const originalCards = document.querySelectorAll('.solution-card');
+            const numberNav = document.getElementById('numberNav');
+            
+            // Loop setup
+            originalCards.forEach(card => track.appendChild(card.cloneNode(true)));
+            originalCards.forEach(card => track.insertBefore(card.cloneNode(true), track.firstChild));
+
+            const allCards = document.querySelectorAll('.solution-card');
+            let currentIndex = originalCards.length;
+            const cardWidth = 320; 
+            const slideTime = 2500; // Slightly slower for better readability
+            let start = Date.now();
+
+            // PURE BLUE GRADIENT STEPS
+            const bgGradients = [
+                'radial-gradient(circle at center, #1e3a8a 0%, #020617 100%)', // Blue 800
+                'radial-gradient(circle at center, #172554 0%, #020617 100%)', // Blue 950
+                'radial-gradient(circle at center, #1e40af 0%, #020617 100%)'  // Blue 700
+            ];
+
+            originalCards.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.className = `num-btn ${i === 0 ? 'active' : ''}`;
+                btn.innerText = (i + 1).toString().padStart(2, '0');
+                btn.onclick = () => { currentIndex = i + originalCards.length; resetAuto(); };
+                numberNav.appendChild(btn);
+            });
+
+            function updateSlider(animate = true) {
+                track.style.transition = animate ? 'transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)' : 'none';
+                const offset = (window.innerWidth / 2) - 150; 
+                track.style.transform = `translateX(${-currentIndex * cardWidth + offset}px)`;
+                
+                allCards.forEach((c, i) => c.classList.toggle('active', i === currentIndex));
+                const dots = document.querySelectorAll('.num-btn');
+                const realIndex = currentIndex % originalCards.length;
+                dots.forEach((b, i) => b.classList.toggle('active', i === realIndex));
+                
+                // Change background color to a Blue variation
+                section.style.background = bgGradients[realIndex % bgGradients.length];
+            }
+
+            function checkInfinite() {
+                if (currentIndex >= originalCards.length * 2) {
+                    currentIndex = originalCards.length;
+                    updateSlider(false);
+                }
+                if (currentIndex < originalCards.length) {
+                    currentIndex = originalCards.length * 2 - 1;
+                    updateSlider(false);
+                }
+            }
+
+            function step() {
+                const now = Date.now();
+                if (now - start >= slideTime) {
+                    currentIndex++;
+                    start = now;
+                    updateSlider();
+                    setTimeout(checkInfinite, 850);
+                }
+                requestAnimationFrame(step);
+            }
+
+            function resetAuto() { start = Date.now(); updateSlider(); }
+
+            document.getElementById('nextBtn').onclick = () => { currentIndex++; resetAuto(); setTimeout(checkInfinite, 850); };
+            document.getElementById('prevBtn').onclick = () => { currentIndex--; resetAuto(); setTimeout(checkInfinite, 850); };
+            window.addEventListener('resize', () => updateSlider(false));
+            
+            updateSlider(false);
+            requestAnimationFrame(step);
+        });
+    </script>
+ <!--key focus  area-->
+
+   <!--- <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl lg:text-4xl font-bold text-center text-gray-800 mb-12">Our Core Solutions</h2>
             
@@ -98,7 +275,7 @@
             </div>
         </div>
     </section>
-
+-->
     
     <section class="py-20">
         <div class="container mx-auto px-6">
@@ -127,7 +304,6 @@
     </section>
 
     
-
     <section class="py-16  pb-20">
         <div class="container  bg-indigo-600 mx-auto px-16 py-12  text-center">
             <h2 class="text-3xl lg:text-4xl font-extrabold text-white mb-4">
@@ -147,12 +323,14 @@
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-6">
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4 text-indigo-400">Africana Tech</h3>
-                    <p class="text-sm text-gray-400">We Deliver Cutting-Edge Technology Solutions That Drive Growth, Enhance Security, And Establish Powerful Digital Presence for Businesses Across Africa And beyond. We Deliver Cutting-Edge Technology Solutions That Drive Growth, Enhance.</p>
-                </div>
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-10 border-b border-gray-700 pb-8 mb-8">
+            
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold text-white">Africana Tech</h3>
+                <p class="text-sm text-gray-400  leading-relaxed">
+                    We deliver cutting-edge technology solutions that drive growth, enhance security, and establish a powerful digital presence for businesses across Africa and beyond.
+                </p>
+            </div>
                 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Links</h3>
@@ -201,7 +379,7 @@
                 <div class="space-y-3">                     
                     <p class="flex items-start text-sm text-gray-400">
                         <i class="fas fa-map-marker-alt text-lg mr-3 mt-1 text-indigo-400"></i>
-                        <span>Dar es salaam Tanzania</span>
+                        <span>Mwanza Tanzania</span>
                     </p>                    
                     <p class="flex items-center text-sm text-gray-400">
                         <i class="fas fa-envelope text-lg mr-3 text-indigo-400"></i>
@@ -223,7 +401,7 @@
         </div>
     </footer>
     
-  
+
     <script src="script.js"></script>
 </body>
 </html> 

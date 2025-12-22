@@ -1,0 +1,116 @@
+        #services-section {
+            transition: background 1.5s ease-in-out;
+            /* Start with a deep Tech Blue */
+            background: radial-gradient(circle at center, #0345a9 0%, #0c2ec5 100%);
+            position: relative;
+        }
+
+        .solutions-mask {
+            padding: 30px 0;
+            overflow: hidden; 
+            position: relative;
+            z-index: 10;
+            width: 100%;
+        }
+
+        #track {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+            will-change: transform;
+        }
+
+        .solution-card {
+            flex-shrink: 0;
+            width: 300px; 
+            height: 240px; 
+            margin: 0 10px;
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.6s ease;
+            filter: brightness(0.3) grayscale(1);
+            opacity: 0.3;
+            transform: scale(0.85);
+            /* Hidden border initially */
+            border: 2px solid transparent;
+        }
+
+        /* GLOWING BORDER FOR ACTIVE CARD */
+        .solution-card.active {
+            filter: brightness(1) grayscale(0);
+            opacity: 1;
+            transform: scale(1);
+            z-index: 50;
+            border: 2px solid #3b82f6;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.6), inset 0 0 10px rgba(59, 130, 246, 0.2);
+        }
+
+        .card-img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+
+        .glass-box {
+            position: absolute;
+            bottom: 10px; 
+            left: 10px; 
+            right: 10px;
+            background: rgba(15, 23, 42, 0.95);
+            
+            /* Safari 9+, Safari on iOS 9+ Support */
+            -webkit-backdrop-filter: blur(8px);
+            /* Standard syntax */
+            backdrop-filter: blur(8px);
+            
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            
+            /* Smooth ease-out for mobile responsiveness */
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            
+            min-height: 85px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            pointer-events: none; /* Prevents the box from interfering with card clicks */
+}
+        
+        .glass-box h3 { font-size: 0.9rem; margin-bottom: 2px; }
+        .glass-box p { font-size: 0.65rem; line-height: 1.3; color: #cbd5e1; }
+
+        .solution-card.active .glass-box {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.2s;
+        }
+
+        /* Nav Arrows Styling */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            width: 45px;
+            height: 45px;
+            background: rgba(59, 130, 246, 0.05);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .nav-arrow:hover { background: #3b82f6; box-shadow: 0 0 15px #3b82f6; }
+        #prevBtn { left: 20px; }
+        #nextBtn { right: 20px; }
+
+        /* Navigation Dots */
+        .num-btn {
+            color: #64748b; font-size: 0.7rem; width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            border: 1px solid rgba(59, 130, 246, 0.1); cursor: pointer; transition: 0.3s;
+        }
+        .num-btn.active { background: #3b82f6; color: white; box-shadow: 0 0 10px #3b82f6; border-color: white; }
+
+        /* REMOVED PROGRESS BAR CSS */

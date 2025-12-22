@@ -270,3 +270,84 @@ function onTogglemenu(el){
             window.location.href = redirectUrl; 
         }, 10000); // 10000 milliseconds = 10 seconds
     });
+
+
+
+    //solution provided//
+window.addEventListener('load', () => {
+            const section = document.getElementById('services-section');
+            const track = document.getElementById('track');
+            const originalCards = document.querySelectorAll('.solution-card');
+            const numberNav = document.getElementById('numberNav');
+            
+            // Loop setup
+            originalCards.forEach(card => track.appendChild(card.cloneNode(true)));
+            originalCards.forEach(card => track.insertBefore(card.cloneNode(true), track.firstChild));
+
+            const allCards = document.querySelectorAll('.solution-card');
+            let currentIndex = originalCards.length;
+            const cardWidth = 320; 
+            const slideTime = 2500; // Slightly slower for better readability
+            let start = Date.now();
+
+            // PURE BLUE GRADIENT STEPS
+            const bgGradients = [
+                'radial-gradient(circle at center, #1e3a8a 0%, #020617 100%)', // Blue 800
+                'radial-gradient(circle at center, #172554 0%, #020617 100%)', // Blue 950
+                'radial-gradient(circle at center, #1e40af 0%, #020617 100%)'  // Blue 700
+            ];
+
+            originalCards.forEach((_, i) => {
+                const btn = document.createElement('button');
+                btn.className = `num-btn ${i === 0 ? 'active' : ''}`;
+                btn.innerText = (i + 1).toString().padStart(2, '0');
+                btn.onclick = () => { currentIndex = i + originalCards.length; resetAuto(); };
+                numberNav.appendChild(btn);
+            });
+
+            function updateSlider(animate = true) {
+                track.style.transition = animate ? 'transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)' : 'none';
+                const offset = (window.innerWidth / 2) - 150; 
+                track.style.transform = `translateX(${-currentIndex * cardWidth + offset}px)`;
+                
+                allCards.forEach((c, i) => c.classList.toggle('active', i === currentIndex));
+                const dots = document.querySelectorAll('.num-btn');
+                const realIndex = currentIndex % originalCards.length;
+                dots.forEach((b, i) => b.classList.toggle('active', i === realIndex));
+                
+                // Change background color to a Blue variation
+                section.style.background = bgGradients[realIndex % bgGradients.length];
+            }
+
+            function checkInfinite() {
+                if (currentIndex >= originalCards.length * 2) {
+                    currentIndex = originalCards.length;
+                    updateSlider(false);
+                }
+                if (currentIndex < originalCards.length) {
+                    currentIndex = originalCards.length * 2 - 1;
+                    updateSlider(false);
+                }
+            }
+
+            function step() {
+                const now = Date.now();
+                if (now - start >= slideTime) {
+                    currentIndex++;
+                    start = now;
+                    updateSlider();
+                    setTimeout(checkInfinite, 850);
+                }
+                requestAnimationFrame(step);
+            }
+
+            function resetAuto() { start = Date.now(); updateSlider(); }
+
+            document.getElementById('nextBtn').onclick = () => { currentIndex++; resetAuto(); setTimeout(checkInfinite, 850); };
+            document.getElementById('prevBtn').onclick = () => { currentIndex--; resetAuto(); setTimeout(checkInfinite, 850); };
+            window.addEventListener('resize', () => updateSlider(false));
+            
+            updateSlider(false);
+            requestAnimationFrame(step);
+        });
+   
