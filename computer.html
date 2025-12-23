@@ -14,32 +14,37 @@
 </head>
 <body class="font-[Poppins] bg-gray-100">
 
-    <header class="bg-white shadow-md py-4">
+   <div id="menuOverlay" class="fixed inset-0 bg-black/40 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-300"></div>
 
-    <nav class="relative flex justify-between items-center w-[92%] mx-auto ">
-
+<header class="fixed top-0 left-0 w-full bg-white shadow-md py-3 z-[100]">
+    <nav class="flex justify-between items-center w-[92%] mx-auto">
         <div>
-            <img class="w-20" src="picha/AFRICANA TECH SOLUTION-01.png" alt="">
+            <img class="w-16 md:w-20" src="picha/TECH LOGO-01.png" alt="Africana Tech Logo">
         </div>
 
-        <div id="navLinks" class="absolute left-0 top-full w-full bg-white min-h-[60vh] px-5 z-50 hidden md:static md:flex md:w-auto md:min-h-fit md:items-center">
-            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw]  gap-8 font-medium">
-                <li><a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a></li>
-                <li><a href="about.html" class="text-gray-700 hover:text-blue-500">About</a></li>
-                <li><a href="service.html" class="text-gray-700 hover:text-blue-500">Services</a></li>
-                <li><a href="client.html" class="text-gray-700 hover:text-blue-500">Client</a></li>
+        <div id="navLinks" class="absolute left-4 top-[70px] w-[220px] bg-white shadow-2xl rounded-2xl px-6 z-50 
+            hidden opacity-0 scale-95 origin-top-left transition-all duration-300 ease-out
+            md:static md:flex md:w-auto md:shadow-none md:opacity-100 md:scale-100 md:translate-y-0 md:bg-transparent md:p-0">
+            
+            <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-2 py-6 md:py-0 font-bold">
+                <li><a href="index.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-50 md:border-none">Home</a></li>
+                <li><a href="about.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-100 md:border-none">About</a></li>
+                <li><a href="service.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-100 md:border-none">Services</a></li>
+                <li><a href="client.html" class="text-gray-900 hover:text-blue-500 block py-3 md:border-none">Client</a></li>
             </ul>
         </div>
 
-        <div class="flex items-center gap-6">
-            <a href="contact.html" class="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Contact Us</button></a>
-            <ion-icon onclick="onTogglemenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden "></ion-icon>
+        <div class="flex items-center gap-4">
+            <a href="contact.html" class="bg-blue-500 text-white px-5 py-2 rounded font-bold hover:bg-blue-600 transition-colors">
+                Contact Us
+            </a>
+            <ion-icon onclick="onTogglemenu(this)" name="menu" class="text-4xl cursor-pointer md:hidden text-gray-800"></ion-icon>
         </div>
     </nav>
-    </header>
+</header>
 
 
-<div class="container mx-auto px-4 py-16 max-w-6xl">
+<div class="container mx-auto px-4 pt-32 pb-16 max-w-6xl">
 
     <header class="text-center mb-16 border-b-4 border-primary-blue pb-8">
         <h1 class="text-5xl md:text-6xl font-extrabold text-dark-text mb-4">
@@ -311,86 +316,93 @@
 
 
     
- <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-6">
+<footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-b border-gray-700 pb-10">
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8 mb-8">
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4 text-indigo-400">Africana Tech</h3>
-                    <p class="text-sm text-gray-400">We Deliver Cutting-Edge Technology Solutions That Drive Growth, Enhance Security, And Establish Powerful Digital Presence for Businesses Across Africa And beyond. We Deliver Cutting-Edge Technology Solutions That Drive Growth, Enhance.
-</p>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Links</h3>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Our Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Client</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-white">Africana Tech</h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    We deliver cutting-edge technology solutions that drive growth, enhance security, and establish a powerful digital presence for businesses across Africa and beyond.
+                </p>
+            </div>    
 
-                 <div>
-                        <h3 class="text-lg font-semibold mb-4">Social Media</h3>
-                        <div class="flex flex-col space-y-3 text-sm">                            
-                            <a href="YOUR_INSTAGRAM_LINK" class="text-gray-400 hover:text-pink-500 transition duration-300" 
-                            aria-label="Instagram">
-                                <i class="fab fa-instagram mr-2"></i> Instagram
-                            </a>                            
-                            <a href="YOUR_X_LINK" class="text-gray-400 hover:text-blue-400 transition duration-300" 
-                            aria-label="X (Twitter)">
-                                <i class="fab fa-x-twitter mr-2"></i>
-                                X (Twitter)
-                            </a>                            
-                            <a href="YOUR_FACEBOOK_LINK" class="text-gray-400 hover:text-blue-600 transition duration-300" 
-                            aria-label="Facebook">
-                                <i class="fab fa-facebook-f mr-2"></i>
-                                Facebook
-                            </a>
-                            
-                            <a href="YOUR_TIKTOK_LINK" class="text-gray-400 hover:text-white transition duration-300" 
-                            aria-label="TikTok">
-                                <i class="fab fa-tiktok mr-2"></i>
-                                TikTok
-                            </a>                            
-                            <a href="YOUR_LINKEDIN_LINK" class="text-gray-400 hover:text-blue-500 transition duration-300" 
-                            aria-label="LinkedIn">
-                                <i class="fab fa-linkedin-in mr-2"></i>
-                                LinkedIn
-                            </a>                            
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                    <li><a href="service.html" class="text-gray-400 hover:text-white transition">Our Services</a></li>
+                    <li><a href="client.html" class="text-gray-400 hover:text-white transition">Client</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Social Media</h3>
+                <div class="flex flex-row md:flex-col space-x-5 md:space-x-0 md:space-y-3 text-sm">                            
+                    <a href="YOUR_INSTAGRAM_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                        <i class="fab fa-instagram text-xl md:text-base md:w-5"></i> 
+                        <span class="hidden md:inline">Instagram</span>
+                    </a>                            
+                    <a href="YOUR_X_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                        <i class="fab fa-x-twitter text-xl md:text-base md:w-5"></i> 
+                        <span class="hidden md:inline">X (Twitter)</span>
+                    </a>                            
+                    <a href="YOUR_FACEBOOK_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                        <i class="fab fa-facebook-f text-xl md:text-base md:w-5"></i> 
+                        <span class="hidden md:inline">Facebook</span>
+                    </a>
+                    <a href="YOUR_TIKTOK_LINK" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition duration-300 flex items-center">
+                        <i class="fab fa-tiktok text-xl md:text-base md:w-5"></i> 
+                        <span class="hidden md:inline">TikTok</span>
+                    </a>                            
+                </div>
+            </div>           
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-white">Contact</h3>                
+                <div class="flex flex-row md:flex-col space-x-4 md:space-x-0 md:space-y-4"> 
+                    
+                    <a href="https://wa.me/255672743065" target="_blank" rel="noopener noreferrer" class="flex items-center group transition-all duration-300">
+                        <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-green-100 text-green-600 rounded-lg group-hover:bg-green-600 group-hover:text-white transition-all shadow-sm">
+                            <i class="fab fa-whatsapp text-xl"></i>
                         </div>
-                    </div>
-                
-                <div>
-                <h3 class="text-lg font-semibold mb-4">Contact</h3>                
-                <div class="space-y-3">                     
-                    <p class="flex items-start text-sm text-gray-400">
-                        <i class="fas fa-map-marker-alt text-lg mr-3 mt-1 text-indigo-400"></i>
-                        <span>Dar es salaam Tanzania</span>
-                    </p>                    
-                    <p class="flex items-center text-sm text-gray-400">
-                        <i class="fas fa-envelope text-lg mr-3 text-indigo-400"></i>
-                        <span>africanatech@com</span>
-                    </p>                    
-                    <p class="flex items-center text-sm text-gray-400">
-                        <i class="fas fa-phone-alt text-lg mr-3 text-indigo-400"></i>
-                        <span>(+255) 0672 743 065</span>
-                    </p>                    
+                        <div class="hidden md:flex flex-col ml-3">
+                            <span class="text-[10px] font-bold uppercase text-gray-500">WhatsApp</span>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-green-400">(+255) 0672 743 065</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:africanatech@gmail.com" class="flex items-center group transition-all duration-300">
+                        <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-lg group-hover:bg-indigo-600 group-hover:text-white transition-all shadow-sm">
+                            <i class="fas fa-envelope text-lg"></i>
+                        </div>
+                        <div class="hidden md:flex flex-col ml-3">
+                            <span class="text-[10px] font-bold uppercase text-gray-500">Email Us</span>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-indigo-400">africanatech@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="#" target="_blank" class="flex items-center group transition-all duration-300">
+                        <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-emerald-100 text-emerald-600 rounded-lg group-hover:bg-emerald-600 group-hover:text-white transition-all shadow-sm">
+                            <i class="fas fa-map-marker-alt text-lg"></i>
+                        </div>
+                        <div class="hidden md:flex flex-col ml-3">
+                            <span class="text-[10px] font-bold uppercase text-gray-500">Location</span>
+                            <span class="text-xs font-medium text-gray-300 group-hover:text-emerald-400">Mwanza, Tanzania</span>
+                        </div>
+                    </a>
                 </div>
-                </div>  
-
-              
             </div>
 
-            <div class="text-center text-sm text-gray-400">
-                &copy; 2025  Africana Tech Company. All rights reserved.
-            </div>
-            
+        </div> 
+        
+        <div class="pt-8 text-center text-sm text-white text-medium">
+            <p>© 2025 Africana Tech Company. All rights reserved.</p>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <script src="script.js"></script>
         

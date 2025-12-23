@@ -13,12 +13,48 @@ tailwind.config = {
        
 
 
+//phone navgation//
+function onTogglemenu(e) {
+    const navLinks = document.getElementById('navLinks');
+    const overlay = document.getElementById('menuOverlay');
+    
+    // Toggle icon icon
+    e.name = (e.name === 'menu') ? 'close' : 'menu';
 
-function onTogglemenu(el){
-    el.name = el.name === "menu" ? "close" : "menu";
-    const nav = document.getElementById('navLinks');
-    if(nav) nav.classList.toggle('hidden');
+    if (navLinks.classList.contains('hidden')) {
+        // OPEN
+        navLinks.classList.remove('hidden');
+        overlay.classList.remove('hidden');
+        
+        setTimeout(() => {
+            navLinks.classList.add('opacity-100', 'scale-100');
+            navLinks.classList.remove('opacity-0', 'scale-95');
+            overlay.classList.add('opacity-100');
+        }, 10);
+        
+        document.body.style.overflow = 'hidden';
+    } else {
+        // CLOSE
+        navLinks.classList.add('opacity-0', 'scale-95');
+        navLinks.classList.remove('opacity-100', 'scale-100');
+        overlay.classList.remove('opacity-100');
+
+        setTimeout(() => {
+            navLinks.classList.add('hidden');
+            overlay.classList.add('hidden');
+        }, 300);
+        
+        document.body.style.overflow = 'auto';
+    }
 }
+
+// Close when clicking the blurred background
+document.getElementById('menuOverlay').onclick = function() {
+    const menuIcon = document.querySelector('ion-icon[name="close"]');
+    if(menuIcon) onTogglemenu(menuIcon);
+};
+
+
 
 // Modal & form handling (safe guards when elements are missing)
 (() => {
@@ -275,79 +311,77 @@ function onTogglemenu(el){
 
     //solution provided//
 window.addEventListener('load', () => {
-            const section = document.getElementById('services-section');
-            const track = document.getElementById('track');
-            const originalCards = document.querySelectorAll('.solution-card');
-            const numberNav = document.getElementById('numberNav');
-            
-            // Loop setup
-            originalCards.forEach(card => track.appendChild(card.cloneNode(true)));
-            originalCards.forEach(card => track.insertBefore(card.cloneNode(true), track.firstChild));
+    const section = document.getElementById('services-section');
+    const track = document.getElementById('track');
+    const originalCards = document.querySelectorAll('.solution-card');
+    const numberNav = document.getElementById('numberNav');
+    
+    // Loop setup
+    originalCards.forEach(card => track.appendChild(card.cloneNode(true)));
+    originalCards.forEach(card => track.insertBefore(card.cloneNode(true), track.firstChild));
 
-            const allCards = document.querySelectorAll('.solution-card');
-            let currentIndex = originalCards.length;
-            const cardWidth = 320; 
-            const slideTime = 2500; // Slightly slower for better readability
-            let start = Date.now();
+    const allCards = document.querySelectorAll('.solution-card');
+    let currentIndex = originalCards.length;
+    const cardWidth = 350; 
+    const slideTime = 2500; 
+    let start = Date.now();
 
-            // PURE BLUE GRADIENT STEPS
-            const bgGradients = [
-                'radial-gradient(circle at center, #1e3a8a 0%, #020617 100%)', // Blue 800
-                'radial-gradient(circle at center, #172554 0%, #020617 100%)', // Blue 950
-                'radial-gradient(circle at center, #1e40af 0%, #020617 100%)'  // Blue 700
-            ];
+    const bgGradients = [
+        'radial-gradient(circle at center, #1e3a8a 0%, #020617 100%)',
+        'radial-gradient(circle at center, #172554 0%, #020617 100%)',
+        'radial-gradient(circle at center, #1e40af 0%, #020617 100%)'
+    ];
 
-            originalCards.forEach((_, i) => {
-                const btn = document.createElement('button');
-                btn.className = `num-btn ${i === 0 ? 'active' : ''}`;
-                btn.innerText = (i + 1).toString().padStart(2, '0');
-                btn.onclick = () => { currentIndex = i + originalCards.length; resetAuto(); };
-                numberNav.appendChild(btn);
-            });
+    originalCards.forEach((_, i) => {
+        const btn = document.createElement('button');
+        btn.className = `num-btn ${i === 0 ? 'active' : ''}`;
+        btn.innerText = (i + 1).toString().padStart(2, '0');
+        btn.onclick = () => { currentIndex = i + originalCards.length; resetAuto(); };
+        numberNav.appendChild(btn);
+    });
 
-            function updateSlider(animate = true) {
-                track.style.transition = animate ? 'transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)' : 'none';
-                const offset = (window.innerWidth / 2) - 150; 
-                track.style.transform = `translateX(${-currentIndex * cardWidth + offset}px)`;
-                
-                allCards.forEach((c, i) => c.classList.toggle('active', i === currentIndex));
-                const dots = document.querySelectorAll('.num-btn');
-                const realIndex = currentIndex % originalCards.length;
-                dots.forEach((b, i) => b.classList.toggle('active', i === realIndex));
-                
-                // Change background color to a Blue variation
-                section.style.background = bgGradients[realIndex % bgGradients.length];
-            }
+    function updateSlider(animate = true) {
+        track.style.transition = animate ? 'transform 0.8s cubic-bezier(0.65, 0, 0.35, 1)' : 'none';
+        const offset = (window.innerWidth / 2) - 150; 
+        track.style.transform = `translateX(${-currentIndex * cardWidth + offset}px)`;
+        
+        allCards.forEach((c, i) => c.classList.toggle('active', i === currentIndex));
+        const dots = document.querySelectorAll('.num-btn');
+        const realIndex = currentIndex % originalCards.length;
+        dots.forEach((b, i) => b.classList.toggle('active', i === realIndex));
+        
+        section.style.background = bgGradients[realIndex % bgGradients.length];
+    }
 
-            function checkInfinite() {
-                if (currentIndex >= originalCards.length * 2) {
-                    currentIndex = originalCards.length;
-                    updateSlider(false);
-                }
-                if (currentIndex < originalCards.length) {
-                    currentIndex = originalCards.length * 2 - 1;
-                    updateSlider(false);
-                }
-            }
-
-            function step() {
-                const now = Date.now();
-                if (now - start >= slideTime) {
-                    currentIndex++;
-                    start = now;
-                    updateSlider();
-                    setTimeout(checkInfinite, 850);
-                }
-                requestAnimationFrame(step);
-            }
-
-            function resetAuto() { start = Date.now(); updateSlider(); }
-
-            document.getElementById('nextBtn').onclick = () => { currentIndex++; resetAuto(); setTimeout(checkInfinite, 850); };
-            document.getElementById('prevBtn').onclick = () => { currentIndex--; resetAuto(); setTimeout(checkInfinite, 850); };
-            window.addEventListener('resize', () => updateSlider(false));
-            
+    function checkInfinite() {
+        if (currentIndex >= originalCards.length * 2) {
+            currentIndex = originalCards.length;
             updateSlider(false);
-            requestAnimationFrame(step);
-        });
+        }
+        if (currentIndex < originalCards.length) {
+            currentIndex = originalCards.length * 2 - 1;
+            updateSlider(false);
+        }
+    }
+
+    function step() {
+        const now = Date.now();
+        if (now - start >= slideTime) {
+            currentIndex++;
+            start = now;
+            updateSlider();
+            setTimeout(checkInfinite, 850);
+        }
+        requestAnimationFrame(step);
+    }
+
+    function resetAuto() { start = Date.now(); updateSlider(); }
+
+    document.getElementById('nextBtn').onclick = () => { currentIndex++; resetAuto(); setTimeout(checkInfinite, 850); };
+    document.getElementById('prevBtn').onclick = () => { currentIndex--; resetAuto(); setTimeout(checkInfinite, 850); };
+    window.addEventListener('resize', () => updateSlider(false));
+    
+    updateSlider(false);
+    requestAnimationFrame(step);
+});
    

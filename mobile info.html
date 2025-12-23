@@ -14,33 +14,38 @@
 </head>
 <body class="font-[Poppins] bg-gray-100">
 
-    <header class="bg-white shadow-md py-4">
+<div id="menuOverlay" class="fixed inset-0 bg-black/40 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-300"></div>
 
-    <nav class="relative flex justify-between items-center w-[92%] mx-auto ">
-
+<header class="fixed top-0 left-0 w-full bg-white shadow-md py-3 z-[100]">
+    <nav class="flex justify-between items-center w-[92%] mx-auto">
         <div>
-            <img class="w-20" src="picha/AFRICANA TECH SOLUTION-01.png" alt="">
+            <img class="w-16 md:w-20" src="picha/TECH LOGO-01.png" alt="Africana Tech Logo">
         </div>
 
-        <div id="navLinks" class="absolute left-0 top-full w-full bg-white min-h-[60vh] px-5 z-50 hidden md:static md:flex md:w-auto md:min-h-fit md:items-center">
-            <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw]  gap-8 font-medium">
-                <li><a href="index.html" class="text-gray-700 hover:text-blue-500">Home</a></li>
-                <li><a href="about.html" class="text-gray-700 hover:text-blue-500">About</a></li>
-                <li><a href="service.html" class="text-gray-700 hover:text-blue-500">Services</a></li>
-                <li><a href="client.html" class="text-gray-700 hover:text-blue-500">Client</a></li>
+        <div id="navLinks" class="absolute left-4 top-[70px] w-[220px] bg-white shadow-2xl rounded-2xl px-6 z-50 
+            hidden opacity-0 scale-95 origin-top-left transition-all duration-300 ease-out
+            md:static md:flex md:w-auto md:shadow-none md:opacity-100 md:scale-100 md:translate-y-0 md:bg-transparent md:p-0">
+            
+            <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-2 py-6 md:py-0 font-bold">
+                <li><a href="index.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-50 md:border-none">Home</a></li>
+                <li><a href="about.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-100 md:border-none">About</a></li>
+                <li><a href="service.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-100 md:border-none">Services</a></li>
+                <li><a href="client.html" class="text-gray-900 hover:text-blue-500 block py-3 md:border-none">Client</a></li>
             </ul>
         </div>
 
-        <div class="flex items-center gap-6">
-            <a href="contact.html" class="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Contact Us</button></a>
-            <ion-icon onclick="onTogglemenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden "></ion-icon>
+        <div class="flex items-center gap-4">
+            <a href="contact.html" class="bg-blue-500 text-white px-5 py-2 rounded font-bold hover:bg-blue-600 transition-colors">
+                Contact Us
+            </a>
+            <ion-icon onclick="onTogglemenu(this)" name="menu" class="text-4xl cursor-pointer md:hidden text-gray-800"></ion-icon>
         </div>
     </nav>
-    </header>
+</header>
 
     <body class="bg-white font-sans text-dark-text">
 
-    <div class="container mx-auto px-4 py-16 max-w-6xl">
+    <div class="container mx-auto px-4 pt-32 pb-16 max-w-6xl">
 
         <header class="text-center mb-16 border-b-4 border-primary-blue pb-8">
             <h1 class="text-5xl md:text-6xl font-extrabold text-dark-text mb-4">
