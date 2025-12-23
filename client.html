@@ -9,13 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body class="font-[Poppins] bg-gray-100">
-
-<div id="menuOverlay" class="fixed inset-0 bg-black/40 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-300"></div>
 
 <header class="fixed top-0 left-0 w-full bg-white shadow-md py-3 z-[100]">
     <nav class="flex justify-between items-center w-[92%] mx-auto">
@@ -23,30 +20,31 @@
             <img class="w-16 md:w-20" src="picha/TECH LOGO-01.png" alt="Africana Tech Logo">
         </div>
 
-        <div id="navLinks" class="absolute left-4 top-[70px] w-[220px] bg-white shadow-2xl rounded-2xl px-6 z-50 
-            hidden opacity-0 scale-95 origin-top-left transition-all duration-300 ease-out
-            md:static md:flex md:w-auto md:shadow-none md:opacity-100 md:scale-100 md:translate-y-0 md:bg-transparent md:p-0">
+        <div id="navLinks" class="absolute left-0 top-full w-full bg-white shadow-xl px-8 z-50 
+            hidden opacity-0 -translate-y-2 transition-all duration-300 ease-out
+            md:static md:flex md:w-auto md:shadow-none md:opacity-100 md:translate-y-0 md:bg-transparent md:p-0">
             
-            <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-2 py-6 md:py-0 font-bold">
-                <li><a href="index.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-50 md:border-none">Home</a></li>
-                <li><a href="about.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-100 md:border-none">About</a></li>
-                <li><a href="service.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-100 md:border-none">Services</a></li>
-                <li><a href="client.html" class="text-gray-900 hover:text-blue-500 block py-3 md:border-none">Client</a></li>
+            <ul class="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 py-6 md:py-0 font-bold">
+                <li><a href="index.html" class="text-gray-900 hover:text-blue-500 block py-3 md:px-2 border-b border-gray-100 md:border-none">Home</a></li>
+                <li><a href="about.html" class="text-gray-900 hover:text-blue-500 block py-3 md:px-2 border-b border-gray-100 md:border-none">About</a></li>
+                <li><a href="service.html" class="text-gray-900 hover:text-blue-500 block py-3 md:px-2 border-b border-gray-100 md:border-none">Services</a></li>
+                <li><a href="client.html" class="text-gray-900 hover:text-blue-500 block py-3 md:px-2 md:border-none">Client</a></li>
             </ul>
         </div>
 
         <div class="flex items-center gap-4">
-            <a href="contact.html" class="bg-blue-500 text-white px-5 py-2 rounded font-bold hover:bg-blue-600 transition-colors">
+            <a href="contact.html" class="bg-blue-500 text-white px-5 py-2 rounded font-bold hover:bg-blue-600 transition-colors shadow-sm">
                 Contact Us
             </a>
             <ion-icon onclick="onTogglemenu(this)" name="menu" class="text-4xl cursor-pointer md:hidden text-gray-800"></ion-icon>
         </div>
     </nav>
 </header>
+   
 
 
    
-       <section class="relative bg-gray-900 h-[45vh] flex items-center justify-center">
+<section class="relative bg-gray-900 h-[60vh] flex items-center justify-center">
          <div class="absolute inset-0">
             <img 
                 src="picha/programming-background-collage.jpg" 
@@ -57,7 +55,7 @@
         </div>
         
         <div class="relative z-10 text-center text-white p-6 max-w-4xl mx-auto">
-            <h1 class="text-5xl sm:text-6xl lg:text-4xl font-extrabold mb-4 leading-tight">  Who  We Serve</h1>
+            <h1 class="text-5xl sm:text-6xl lg:text-4xl font-extrabold mb-4 leading-tight pt-32">  Who  We Serve</h1>
             <p class="text-xl sm:text-2xl font-medium text-white-400 mb-3">We're proud to partner with <b>forward-thinking organizations</b> across Africa.</p>
         </div>
     </section>
