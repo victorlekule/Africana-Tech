@@ -14,26 +14,28 @@
 </head>
 <body class="font-[Poppins] bg-gray-100">
 
+<div id="menuOverlay" class="fixed inset-0 bg-black/40 backdrop-blur-md z-40 hidden opacity-0 transition-opacity duration-300"></div>
+
 <header class="fixed top-0 left-0 w-full bg-white shadow-md py-3 z-[100]">
     <nav class="flex justify-between items-center w-[92%] mx-auto">
         <div>
             <img class="w-16 md:w-20" src="picha/TECH LOGO-01.png" alt="Africana Tech Logo">
         </div>
 
-        <div id="navLinks" class="absolute left-0 top-full w-full bg-white shadow-xl px-8 z-50 
-            hidden opacity-0 -translate-y-2 transition-all duration-300 ease-out
-            md:static md:flex md:w-auto md:shadow-none md:opacity-100 md:translate-y-0 md:bg-transparent md:p-0">
+        <div id="navLinks" class="absolute left-0 top-[70px] w-[220px] bg-white shadow-2xl rounded-2xl px-6 z-50 
+            hidden opacity-0 scale-95 origin-top-left transition-all duration-300 ease-out
+            md:static md:flex md:w-auto md:shadow-none md:opacity-100 md:scale-100 md:translate-y-0 md:bg-transparent md:p-0">
             
-            <ul class="flex flex-col md:flex-row md:items-center gap-4 md:gap-10 py-6 md:py-0 font-bold">
-                <li><a href="index.html" class="text-gray-900 hover:text-blue-500 block py-3 md:px-2 border-b border-gray-100 md:border-none">Home</a></li>
-                <li><a href="about.html" class="text-gray-900 hover:text-blue-500 block py-3 md:px-2 border-b border-gray-100 md:border-none">About</a></li>
-                <li><a href="service.html" class="text-gray-900 hover:text-blue-500 block py-3 md:px-2 border-b border-gray-100 md:border-none">Services</a></li>
-                <li><a href="client.html" class="text-gray-900 hover:text-blue-500 block py-3 md:px-2 md:border-none">Client</a></li>
+            <ul class="flex flex-col md:flex-row md:items-center md:gap-[4vw] gap-2 py-6 md:py-0 font-bold">
+                <li><a href="index.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-50 md:border-none">Home</a></li>
+                <li><a href="about.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-100 md:border-none">About</a></li>
+                <li><a href="service.html" class="text-gray-900 hover:text-blue-500 block py-3 border-b border-gray-100 md:border-none">Services</a></li>
+                <li><a href="client.html" class="text-gray-900 hover:text-blue-500 block py-3 md:border-none">Client</a></li>
             </ul>
         </div>
 
         <div class="flex items-center gap-4">
-            <a href="contact.html" class="bg-blue-500 text-white px-5 py-2 rounded font-bold hover:bg-blue-600 transition-colors shadow-sm">
+            <a href="contact.html" class="bg-blue-500 text-white px-5 py-2 rounded font-bold hover:bg-blue-600 transition-colors">
                 Contact Us
             </a>
             <ion-icon onclick="onTogglemenu(this)" name="menu" class="text-4xl cursor-pointer md:hidden text-gray-800"></ion-icon>
