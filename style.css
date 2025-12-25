@@ -108,3 +108,89 @@
         .num-btn.active { background: #3b82f6; color: white; box-shadow: 0 0 10px #3b82f6; border-color: white; }
 
         /* REMOVED PROGRESS BAR CSS */
+
+
+/*icon for contact page*/
+
+/* Container for the Icon */
+.icon-svg-x {
+    width: 1.25rem; /* Exactly 20px like text-xl */
+    height: 1.25rem;
+    display: block;
+}
+.social-icon {
+    position: relative; /* Required for tooltip positioning */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+/* Tooltip Bubble Styling */
+.social-icon::after {
+    content: attr(data-tooltip); /* Pulls text from HTML attribute */
+    position: absolute;
+    bottom: 125%; /* Positions it above the icon */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #1e293b; /* Dark Slate */
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    z-index: 100;
+}
+
+/* Little Arrow under the Tooltip */
+.social-icon::before {
+    content: '';
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+/* Show Tooltip on Hover */
+.social-icon:hover::after,
+.social-icon:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Brand Hover States */
+.icon-facebook:hover { background-color: #1877f2; color: white; }
+.icon-x:hover { background-color: #1877f2; color: white; }
+.icon-linkedin:hover { background-color: #0077b5; color: white; }
+.icon-instagram:hover { background-color: #1877f2; color: white; }
+.icon-tiktok:hover { background-color: #1877f2; color: white; }
+.icon-whatsapp:hover { background-color: #1877f2; color: white; }
+
+.social-icon:hover {
+    background-color: #000000; 
+    color: #FFFFFF;}
+.icon-facebook:hover { background-color: #1877f2; color: white; }
+.icon-x:hover { background-color: #1877f2; color: white; }
+.icon-linkedin:hover { background-color: #0077b5; color: white; }
+.icon-instagram:hover { background-color: #ea2365; color: white; }
+.icon-tiktok:hover { background-color: #000000; color: white; }
+.icon-whatsapp:hover { background-color: #02720c; color: white; }

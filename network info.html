@@ -186,7 +186,7 @@
         <i class="fas fa-paper-plane mr-3"></i>
         Request a Free Network Audit
     </a>
-    <div id="projectInquiryModal" class="fixed inset-0 z-50 overflow-y-auto hidden">
+  <div id="projectInquiryModal" class="fixed inset-0 z-[9999] overflow-y-auto hidden">
         <div class="fixed inset-0 bg-black bg-opacity-70 transition-opacity"></div>      
         <div class="flex items-center justify-center min-h-screen p-4">       
 
@@ -254,14 +254,29 @@
                                        class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
                                 <i class="fas fa-mobile-alt text-black mr-2"></i> <span class="text-black font-medium">Mobile App Development</span>                            </label>                          
                             <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
-                                <input type="checkbox" name="services[]" value="cyber_security"
+                                <input type="checkbox" name="services[]" value="cyber_security" data-detail="cyberDetail"
                                        class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
                                 <i class="fas fa-shield-alt text-black mr-2"></i> <span class="text-black font-medium">Cybersecurity</span>
                             </label>                         
                             <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
-                                <input type="checkbox" name="services[]" value="networking"
+                                <input type="checkbox" name="services[]" value="networking" data-detail="nertworkdetail"
                                        class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
-                                <i class="fas fa-network-wired text-black mr-2"></i> <span class="text-black font-medium">Networking & Infrastructure</span>
+                                <i class="fas fa-network-wired text-black mr-2"></i> <span class="text-black font-medium">Network Architecture</span>
+                            </label>
+                            <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
+                                <input type="checkbox" name="services[]" value="Coperate" data-detail="CoperateDetail"
+                                       class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
+                                <i class="fas fa-network-wired text-black mr-2"></i> <span class="text-black font-medium">Corparate Training</span>
+                            </label>
+                            <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
+                                <input type="checkbox" name="services[]" value="aitraining" data-detail="aitrainingDetail"
+                                       class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
+                                <i class="fas fa-network-wired text-black mr-2"></i> <span class="text-black font-medium">AI Training</span>
+                            </label>
+                            <label class="flex items-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer transition duration-150">
+                                <input type="checkbox" name="services[]" value="networking" data-detail="Computerdetail"
+                                       class="w-4 h-4 text-black border-gray-300 rounded focus:ring-black mr-3 service-checkbox">
+                                <i class="fas fa-network-wired text-black mr-2"></i> <span class="text-black font-medium">Computer Support</span>
                             </label>
                         </div>
                     </div>
@@ -271,7 +286,8 @@
                             <select id="web_type" name="web_type"
                                      class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
                                 <option value="">-- Select type --</option>
-                                <option value="corporate">Corporate Marketing Site</option>
+                                <option value="corporate">Business Website</option>
+                                <option value="corporate">Business System</option>
                                 <option value="ecommerce">E-commerce/Online Store</option>
                                 <option value="saas">SaaS/Custom Web App</option>
                             </select>
@@ -280,14 +296,14 @@
                             <label for="brand_focus" class="block text-sm font-medium text-dark-text mb-1">What is the primary focus of your branding project?</label>
                             <select id="brand_focus" name="brand_focus"
                                      class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
-                                <option value="">-- Select focus --</option>
+                               <option value="">-- Select focus --</option>
                                 <option value="rebrand">Rebranding & Strategy</option>
                                 <option value="guide">Full Brand & Social Strategy</option>
                                 <option value="guide">Social Media Management (Content & Ads)</option>
                                 <option value="new_identity">Brand Identity (Logo, Style Guide)</option>
                             </select>
-                        </div>                      
-
+                        </div> 
+                        
                         <div id="mobileDetail" class="hidden">
                             <label for="mobile_platform" class="block text-sm font-medium text-dark-text mb-1">Which platform(s) are you targeting?</label>
                             <select id="mobile_platform" name="mobile_platform"
@@ -298,21 +314,78 @@
                                 <option value="both">iOS & Android (Native/Hybrid)</option>
                             </select>
                         </div>
+
+
+                        <div id="CoperateDetail" class="hidden">
+                            <label for="mobile_platform" class="block text-sm font-medium text-dark-text mb-1">Which platform(s) are you targeting?</label>
+                            <select id="mobile_platform" name="Coperate"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
+                                <option value="">-- Select platform --</option>
+                               <option value="corp_leadership">Digital Leadership Training</option>
+                                <option value="corp_productivity">Office Productivity Workshops</option>
+                                <option value="corp_soft_skills">IT Soft Skills for Teams</option>
+                             </select>
+                        </div>
+                        <div id="aitrainingDetail" class="hidden">
+                            <label for="mobile_platform" class="block text-sm font-medium text-dark-text mb-1">Which platform(s) are you targeting?</label>
+                            <select id="mobile_platform" name="aitraining"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
+                                <option value="">-- Select platform --</option>
+                               <option value="ai_prompt_eng">AI Prompt Engineering</option>
+                                <option value="ai_business_automation">AI for Business Automation</option>
+                                <option value="ai_data_analytics">AI Data Analytics Training</option>
+                             </select>
+                        </div>
+                        <div id="cyberDetail" class="hidden">
+                            <label for="mobile_platform" class="block text-sm font-medium text-dark-text mb-1">Which platform(s) are you targeting?</label>
+                            <select id="mobile_platform" name="cyberDetail"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
+                                <option value="">-- Select platform --</option>
+                                <option value="cyber_audit">Security Audit & Assessment</option>
+                                <option value="cyber_threat_protection">Threat Protection & Firewall</option>
+                                <option value="cyber_incident_response">Incident Response Planning</option>
+                             </select>
+                        </div>
+
+                        <div id="Computerdetail" class="hidden">
+                            <label for="mobile_platform" class="block text-sm font-medium text-dark-text mb-1">Which platform(s) are you targeting?</label>
+                            <select id="mobile_platform" name="Computer"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
+                                <option value="">-- Select platform --</option>
+                                <option value="support_remote">Remote Technical Support</option>
+                                <option value="support_hardware">Hardware Repair & Maintenance</option>
+                                <option value="support_software">Software Troubleshooting</option>
+                             </select>
+                        </div>
+                        <div id="nertworkdetail" class="hidden">
+                            <label for="mobile_platform" class="block text-sm font-medium text-dark-text mb-1">Which platform(s) are you targeting?</label>
+                            <select id="mobile_platform" name="nertwork"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black">
+                                <option value="">-- Select platform --</option>
+                                <option value="net_design">Enterprise Network Design</option>
+                                <option value="net_cloud_hybrid">Cloud & Hybrid Integration</option>
+                                <option value="net_wireless_optimize">Wireless Network Optimization</option>
+                             </select>
+                        </div>
                     </div>
                     <div>
-                        <label for="details" class="block text-sm font-medium text-black mb-1">Tell us about your overall project/goals:</label>
-                        <textarea id="details" name="details" rows="4"
-                                  class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black"
-                                  placeholder="Describe your current challenge and what you hope to achieve."></textarea>                    </div>
-                    <button type="submit" id="submitBtn"
-                            class="w-full inline-flex items-center justify-center bg-fpso-dark text-white hover:bg-opacity-90 font-bold rounded-lg text-lg px-8 py-4 transition duration-300 transform hover:scale-[1.01] shadow-lg">
-                        <i class="fas fa-paper-plane mr-3"></i>
-                        Submit Project Inquiry
-                    </button>  
+                       <form action="https://formspree.io/f/vicentlekule22@gmail.com" method="POST">
+                        <div class="mb-6">
+                            <label for="details" class="block text-sm font-medium text-black mb-1">Tell us about your overall project/goals:</label>
+                            <textarea id="details" name="details" rows="4" required
+                                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-black focus:border-black transition duration-150 text-black"
+                                    placeholder="Describe your current challenge and what you hope to achieve."></textarea>
+                        </div>
+                        <button type="submit" id="submitBtn"
+                                class="w-full inline-flex items-center justify-center bg-black text-white hover:bg-opacity-90 font-bold rounded-lg text-lg px-8 py-4 transition duration-300 transform hover:scale-[1.01] shadow-lg">
+                            <ion-icon name="paper-plane-outline" class="mr-3 text-xl"></ion-icon>
+                            Submit Project Inquiry
+                        </button>
+                        </form>  
                 </form>
             </div>        
         </div>
-    </div>
+    </div> 
             
         </section>
 

@@ -384,4 +384,4 @@ window.addEventListener('load', () => {
     updateSlider(false);
     requestAnimationFrame(step);
 });
-   
+
